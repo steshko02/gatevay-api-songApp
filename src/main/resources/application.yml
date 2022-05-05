@@ -1,0 +1,27 @@
+auth0:
+  audience: http://localhost:8080/
+#k)EE2_#p?NMFnXh
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          auth0:
+            client-id: 4U0RJAhsG9JJp23wQVdwuaoby62ICwgj
+            client-secret: -BC7gp-6O9bKSXwoCeykAW4hfieGlWpCoW1SAdOzkpZ1jzpb_0JgxpuT74ut45YP
+            scope:
+              - openid
+              - profile
+              - email
+              - read:all
+              - user:music
+        provider:
+          auth0:
+            issuer-uri: https://dev-hf6j43cb.eu.auth0.com/
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-hf6j43cb.eu.auth0.com/
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/

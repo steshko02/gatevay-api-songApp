@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+<body>
+<audio id="voice" controls="">
+    <source th:src="@{http://localhost:8082/songs/{id}(id=${id})}">
+</audio>
+</body>
+</html>
